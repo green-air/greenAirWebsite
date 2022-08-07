@@ -1,7 +1,7 @@
-// import {AiFillInstagram} from 'react-icons/ai.js';
-// import {FaTelegram} from 'react-icons/fa.js';
-// import {FaFacebook} from 'react-icons/fa.js';
-// import {AiOutlineWhatsApp} from 'react-icons/ai.js';
+// import {AiFillInstagram} from "react-icons/ai";
+// import {FaTelegram} from "react-icons/fa";
+// import {FaFacebook} from "react-icons/fa";
+// import {AiOutlineWhatsApp} from "react-icons/ai";
 import React from 'react';
 
 class Icons extends React.Component {
