@@ -1,7 +1,8 @@
 // import logo from './logo.svg';
 // import './App.css';
 
-// import Icons from './Socials_component/Socials.js';
+
+// import { Icons } from './Socials_component/Socials.jsx';
 
 // import React from 'react';
 
@@ -35,21 +36,26 @@
 // attempt 2 -----------------------------------------------------
 
 
-// Navbar imports: -------------------------------------------------
+// Navbar functional imports: -------------------------------------------------
 import ReactDOM from "react-dom";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "./pages/Layout.jsx";
 import Home from "./pages/Home.jsx";
-import Forecast from "./pages/Forecast.jsx";
+import Forecast from "./pages/Forecast.js";
 import About from "./pages/About.jsx";
 import NoPage from "./pages/NoPage.jsx";
-// end navbar imports ----------------------------------------------
+// end navbar functional imports ----------------------------------------------
+
+// Navbar style imports: -------------------------------------------------
+import PrettyNavBar from "./Navigation/PrettyNavBar.js";
+import "bootstrap/dist/css/bootstrap.min.css";
+// end Navbar style imports: -------------------------------------------------
 
 
-
-// Navbar: -------------------------------------------------
 export default function App() {
   return (
+  <div>
+    <PrettyNavBar />
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Layout />}>
@@ -61,8 +67,8 @@ export default function App() {
         </Route>
       </Routes>
     </BrowserRouter>
+    </div>
   );
 }
 
 ReactDOM.render(<App />, document.getElementById("root"));
-// end navbar ----------------------------------------------  

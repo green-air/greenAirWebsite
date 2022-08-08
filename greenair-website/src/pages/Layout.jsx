@@ -1,6 +1,6 @@
 import React from "react";
 import {Outlet} from "react-router-dom";
-import Navbar from "../NavBar.jsx";
+import Navbar from "../Navigation/functionalNavBar.jsx";
 
 const Layout = () => {
   return (

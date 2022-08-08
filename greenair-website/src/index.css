@@ -11,3 +11,8 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* Add the Tailwind directives to your main CSS file */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
