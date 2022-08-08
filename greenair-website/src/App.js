@@ -1,8 +1,9 @@
 // import logo from './logo.svg';
 import './App.css';
 import Icons from './Socials_component/Socials.js';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
-import React from 'react';
+import React, {useState} from 'react';
 import {
   BrowserRouter as Router, Link, Route, Routes
 } from "react-router-dom"
@@ -33,7 +34,7 @@ function App() {
         {/* <Icons /> */}
         <Routes>
         <Route exact path="/" element={<Home/>}/>
-        <Route exact path="/contact" element={<Contact/>}/>
+        <Route exact path="/contact" element={<Contact />}/>
            </Routes>
           
         

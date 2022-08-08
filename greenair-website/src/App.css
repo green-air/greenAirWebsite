@@ -14,7 +14,7 @@
 }
 
 .App-header {
-  background-image: url('./images/Homepage.jpg');
+  background-image: url('./images/Homepage.jpg') no-repeat;
   background-size: 100% auto;
   min-height: 100vh;
   display: flex;
