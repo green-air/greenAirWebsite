@@ -1,11 +1,11 @@
 import React from "react";
 import {Outlet} from "react-router-dom";
-import Navbar from "../Navigation/functionalNavBar.jsx";
+import MyNavBar from "./MyNavBar.jsx";
 
 const Layout = () => {
   return (
     <>
-      <Navbar />
+      <MyNavBar />
       <Outlet />
     </>
   );

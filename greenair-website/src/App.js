@@ -39,7 +39,7 @@
 // Navbar functional imports: -------------------------------------------------
 import ReactDOM from "react-dom";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Layout from "./pages/Layout.jsx";
+import Layout from "./Navigation/Layout.jsx";
 import Home from "./pages/Home.jsx";
 import Forecast from "./pages/Forecast.js";
 import About from "./pages/About.jsx";
@@ -47,7 +47,6 @@ import NoPage from "./pages/NoPage.jsx";
 // end navbar functional imports ----------------------------------------------
 
 // Navbar style imports: -------------------------------------------------
-import PrettyNavBar from "./Navigation/PrettyNavBar.js";
 import "bootstrap/dist/css/bootstrap.min.css";
 // end Navbar style imports: -------------------------------------------------
 
@@ -55,7 +54,6 @@ import "bootstrap/dist/css/bootstrap.min.css";
 export default function App() {
   return (
   <div>
-    <PrettyNavBar />
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Layout />}>

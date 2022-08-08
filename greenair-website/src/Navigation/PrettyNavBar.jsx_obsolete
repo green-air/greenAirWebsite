@@ -2,7 +2,7 @@ import React from "react";
 
 const PrettyNavBar = () => {
     return (
-        
+
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
     <a className="navbar-brand" href="#">
       Navbar
@@ -22,18 +22,19 @@ const PrettyNavBar = () => {
     <div className="collapse navbar-collapse" id="navbarNavDropdown">
       <ul className="navbar-nav">
         <li className="nav-item active">
-          <a className="nav-link" href="#">
+          <a className="nav-link" href="/">
             Home <span className="sr-only">(current)</span>
           </a>
         </li>
         <li className="nav-item">
-          <a className="nav-link" href="#">
-            Features
+          <a className="nav-link" href="About">
+            About
           </a>
+          
         </li>
         <li className="nav-item">
-          <a className="nav-link" href="#">
-            Pricing
+          <a className="nav-link" href="Forecast">
+            Forecast
           </a>
         </li>
         <li className="nav-item dropdown">
