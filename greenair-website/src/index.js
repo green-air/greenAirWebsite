@@ -4,12 +4,22 @@ import './index.css';
 import App from './App.js';
 import reportWebVitals from './reportWebVitals.js';
 
-import ReactDOM from "react-dom/client";
+
 import "./index.css";
 
+import ReactDOM from "react-dom";
 
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import Forecast from "./Forecast.js";
+
+
+//yusuf commented this out because of adding this in 'Navbar imports' section and consequent error message:
+//      Parsing error: Identifier 'ReactDOM' has already been declared. (27:7)
+//import ReactDOM from "react-dom/client";
+
+// Old react-router-dom imports
+// import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+// import Forecast from "./Forecast.js";
+
+// I dont know what this is
 // import ReactBootstrapPage, {
 //   testNamedExport,
 //   testNamedExportTwo,
@@ -18,37 +28,37 @@ import Forecast from "./Forecast.js";
 // import Nav from "react-bootstrap/Nav";
 // import Navbar from "react-bootstrap/Navbar";
 
-const Routing = () => {
-  return (
-    <Router>
-      <div>
-        <nav>
-          <ul>
-            <li>
+
+// const Routing = () => {
+//   return (
+//     <Router>
+//       <div>
+//         <nav>
+//           <ul>
+//             <li>
             
-                <Link to="/">Home</Link>
-                </li>
-                <li>
+//                 <Link to="/">Home</Link>
+//                 </li>
+//                 <li>
               
-                <Link to="forecast">Forecast</Link>
-              </li>
-          </ul>
-        </nav>
+//                 <Link to="forecast">Forecast</Link>
+//               </li>
+//           </ul>
+//         </nav>
            
-      <Routes>
-        <Route exact path="/" element={<App/>} />
-        <Route exact path="/forecast" element={<Forecast/>} />
+//       <Routes>
+//         <Route exact path="/" element={<App/>} />
+//         <Route exact path="/forecast" element={<Forecast/>} />
         
-      </Routes>
-      </div>
-    </Router>
-  );
-};
+//       </Routes>
+//       </div>
+//     </Router>
+//   );
+// };
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Routing />
     <App />
   </React.StrictMode>
 );
