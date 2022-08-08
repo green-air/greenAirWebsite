@@ -36,10 +36,10 @@ function MyNavBar() {
                 </Offcanvas.Title>
               </Offcanvas.Header>
               <Offcanvas.Body>
-                <Nav className="justify-content-end flex-grow-1 pe-3">
-                  <Link className="justify-content-end flex-grow-1 pe-3" to="/">Home</Link>
-                  <Link className="justify-content-end flex-grow-1 pe-3" to="/About">About</Link>
-                  <Link className="justify-content-end flex-grow-1 pe-3" to="/Forecast">Forecast</Link>
+                <Nav className="flex-grow-1 pe-3">
+                  <Link className="flex-grow-1" to="/">Home</Link>
+                  <Link className="flex-grow-1" to="/About">About</Link>
+                  <Link className="flex-grow-1" to="/Forecast">Forecast</Link>
                   <NavDropdown
                     title="Dropdown"
                     id={`offcanvasNavbarDropdown-expand-${expand}`}
