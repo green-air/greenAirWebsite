@@ -1,7 +1,7 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from '../logo.svg';
+import '../App.css';
 
-import Icons from './Socials_component/Socials.js';
+import Icons from '../Socials_component/Socials.jsx';
 
 import React from 'react';
 
@@ -13,7 +13,7 @@ function Forecast() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          This is the forecast page!
         </p>
         <a
           className="App-link"

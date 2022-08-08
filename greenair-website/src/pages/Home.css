@@ -1,0 +1,6 @@
+#elem {animation: blink 0.3s infinite}
+
+@keyframes blink {
+    from {opacity: 0}
+    to {opacity: 1}
+    }
