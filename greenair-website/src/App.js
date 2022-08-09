@@ -44,6 +44,7 @@ import Home from "./pages/Home.jsx";
 import Forecast from "./pages/Forecast.js";
 import About from "./pages/About.jsx";
 import NoPage from "./pages/NoPage.jsx";
+import Contact from "./pages/contact.js";
 // end navbar functional imports ----------------------------------------------
 
 // Navbar style imports: -------------------------------------------------
@@ -61,6 +62,7 @@ export default function App() {
           <Route path="/Forecast" element={<Forecast />} />
           <Route path="/About" element={<About />} />
           <Route path="/Home" element={<Home />} />
+          <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<NoPage />} />
         </Route>
       </Routes>
