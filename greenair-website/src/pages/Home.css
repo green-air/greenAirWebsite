@@ -1,4 +1,6 @@
-#elem {animation: blink 0.3s infinite}
+#blinking {
+    animation: blink 0.3s infinite
+}
 
 @keyframes blink {
     from {opacity: 0}
