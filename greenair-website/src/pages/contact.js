@@ -1,16 +1,17 @@
 import * as React  from 'react';
 import "../App.js"
-// import './contact.css'
+import './contact.css'
 // import Button from 'react-bootstrap/Button';
 // import Card from 'react-bootstrap/Card';
 // import Form from 'react-bootstrap/Form';
 // import {
 //   Link, renderMatches, 
 // } from "react-router-dom";
-// import Icons from './Socials_component/Socials.js';
+import Icons from "../Socials_component/Socials.jsx"
 import { useState } from 'react';
 import background from '../images/Contact.png'
 
+// Contact us Form //
 export default function Contact() {
   const [data, setData] = useState({
     name:"",
@@ -19,14 +20,11 @@ export default function Contact() {
   });
 
   const {name, email, message} = data
-
   const handleChange = e=> {
     setData({...data, [e.target.name]: e.target.value});
   };
-
   const handleSubmit = async e=> {
     e.preventDefault();
-
     try{
       const response = await fetch("https://v1.nocodeapi.com/habashi/google_sheets/RJGcUhyxeoSpDiHZ?tabId=Sheet1", {
         method: 'POST',
@@ -54,12 +52,17 @@ export default function Contact() {
     <form className="card shadow-lg mt-5 p-5 form" onSubmit={handleSubmit} style={{
       width:'80vh',
       position: 'relative',
-      left: '1100px',
+      left: '787px',
       top:'100px',
-      padding:'5px'
+      height:'70vh',
+      backgroundImage:'linear-gradient(#2F4F4F, #8FBC8F)'
   }}>
-      <h3 className="TEXT-CENTRE MB-5">Talk to us!</h3>
-      <div className="form-group">
+      <h3 className="TEXT-CENTRE MB-5" style={{
+        color:'white'
+      }}>Talk to us!</h3>
+      <div className="form-group" style={{
+        color:'white'
+      }}>
         <label htmlFor='name'>Name</label>
         <input 
           type="text"
@@ -70,7 +73,9 @@ export default function Contact() {
           onChange={handleChange}
         />
       </div>
-      <div className='form-group'>
+      <div className='form-group' style={{
+        color:'white'
+      }}>
         <label htmlFor='email'>Email</label>
         <input
           type="text"
@@ -81,7 +86,9 @@ export default function Contact() {
           onChange={handleChange}
         />
       </div>
-      <div className='="form-group'>
+      <div className='="form-group' style={{
+        color:'white'
+      }}>
         <label htmlFor='message'>Message</label>
         <textarea
           name="message"
@@ -91,14 +98,11 @@ export default function Contact() {
           onChange={handleChange}
         />
       </div>
-      <div>
-        <input type="submit" value="Submit" className="btn btn-primary" />
+      <div style={{textAlign:'center', padding:'45px'}}>
+        <input type="Send" value="Send" className="btn btn-primary"  style={{backgroundColor:''}}/>
       </div>
-
     </form>
-    
-    </div>
-    
+    </div>  
   );  
 
   };
