@@ -12,7 +12,3 @@ code {
     monospace;
 }
 
-/* Add the Tailwind directives to your main CSS file */
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
