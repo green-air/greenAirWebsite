@@ -1,5 +1,5 @@
 import * as React  from 'react';
-import "../App.js"
+// import "../App.js"
 // import './contact.css'
 // import Button from 'react-bootstrap/Button';
 // import Card from 'react-bootstrap/Card';
@@ -9,8 +9,8 @@ import "../App.js"
 // } from "react-router-dom";
 // import Icons from './Socials_component/Socials.js';
 import { useState } from 'react';
-import background from '../images/Contact.png'
-
+import background from '../../images/Contact.png';
+//import background from '../greenair-website/src/images/Contact.png';
 export default function Contact() {
   const [data, setData] = useState({
     name:"",

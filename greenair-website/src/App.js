@@ -40,11 +40,12 @@
 import ReactDOM from "react-dom";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "./Navigation/Layout.jsx";
-import Home from "./pages/Home.jsx";
-import Forecast from "./pages/Forecast.js";
-import About from "./pages/About.jsx";
-import NoPage from "./pages/NoPage.jsx";
-import Contact from "./pages/contact.js";
+import Home from "./Components/Home/Home.jsx";
+import Forecast from "./Components/Forecast/Forecast.js";
+import About from "./Components/About/About.jsx";
+import NoPage from "./Components/No_page/NoPage.jsx";
+import Contact from "./Components/Contact/contact.js";
+import Login from "./Components/Login/Login.js";
 // end navbar functional imports ----------------------------------------------
 
 // Navbar style imports: -------------------------------------------------
@@ -63,6 +64,8 @@ export default function App() {
           <Route path="/About" element={<About />} />
           <Route path="/Home" element={<Home />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/Login" element={<Login />} />
+
           <Route path="*" element={<NoPage />} />
         </Route>
       </Routes>

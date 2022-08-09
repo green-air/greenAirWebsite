@@ -1,5 +1,5 @@
-import logo from '../logo.svg';
-import '../App.css';
+import logo from '../../logo.svg';
+import '../../App.css';
 
 import Icons from '../Socials_component/Socials.jsx';
 
@@ -7,13 +7,13 @@ import React from 'react';
 
 
 
-function Forecast() {
+function Login() {
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          This is the forecast page!
+          This is the log in page!
         </p>
         <a
           className="App-link"
@@ -29,4 +29,4 @@ function Forecast() {
   );
 }
 
-export default Forecast;
+export default Login;
