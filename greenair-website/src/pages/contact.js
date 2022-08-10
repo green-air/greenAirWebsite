@@ -52,10 +52,11 @@ export default function Contact() {
     <form className="card shadow-lg mt-5 p-5 form" onSubmit={handleSubmit} style={{
       width:'80vh',
       position: 'relative',
-      left: '787px',
+      left: '600px',
       top:'100px',
-      height:'70vh',
-      backgroundImage:'linear-gradient(#2F4F4F, #8FBC8F)'
+      height:'60vh',
+      backgroundImage:'linear-gradient(#3C4A3F, #9EAFA2, #8BC398)',
+      borderRadius:'90px 60px'   
   }}>
       <h3 className="TEXT-CENTRE MB-5" style={{
         color:'white'
@@ -99,7 +100,7 @@ export default function Contact() {
         />
       </div>
       <div style={{textAlign:'center', padding:'45px'}}>
-        <input type="Send" value="Send" className="btn btn-primary"  style={{backgroundColor:''}}/>
+        <input type="Send" value="Send" className="btn btn-primary"  style={{backgroundColor:''}} id='button'/>
       </div>
     </form>
     </div>  
