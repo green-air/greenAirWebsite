@@ -1,8 +1,6 @@
 import React, { useEffect } from "react";
-import ForecastForm from './pages/ForecastForm.jsx'
 
-
-function APIPage() {
+function ForecastAPI() {
   
   //   useEffect(() => {
   //     fetch(
@@ -51,9 +49,8 @@ function APIPage() {
           writes to the section instead
         </h1>
       </section>
-      The lat is ${ForecastForm.lat} and the lon is ${ForecastForm.lon}
     </div>
   );
 }
 
-export default APIPage;
+export default ForecastAPI;

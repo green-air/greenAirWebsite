@@ -92,7 +92,7 @@
 // }
 
 
-function Forecast() {
+function API_Call() {
     console.log("calling api");
     let postcode = 'PA175DR';
     const CoordsFetch = fetch(
@@ -123,12 +123,9 @@ function Forecast() {
             Longitude is
           </p>
           <CoordsFetch />
-          
-  
-          <Icons />
         </header>
       </div>
     );
   }
     
-  export default Forecast
+  export default API_Call
