@@ -5,26 +5,13 @@ import Icons from '../Socials_component/Socials.jsx';
 
 import React from 'react';
 
-
+import APIPage from '../API_call2.jsx' 
 
 function Forecast() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          This is the forecast page!
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-        <Icons />
-        </header>
+      <APIPage />
+      <Icons />
     </div>
   );
 }
