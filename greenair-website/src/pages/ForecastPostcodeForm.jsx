@@ -27,6 +27,7 @@ function ForecastLocationForm() {
             onChange={handleChange}
           />
         </label>
+        <input type="submit" value="Submit" />
         </form>
     <p>Postcode: {inputs.postcode}</p>
   </div>
