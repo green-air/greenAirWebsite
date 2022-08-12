@@ -9,10 +9,10 @@ class Icons extends React.Component {
     render() {
       return (<div className="socials">
       
-      <FaFacebook />
-      <FaTelegram />
-      <AiOutlineWhatsApp />
-      <AiFillInstagram />
+      <a className = "footer-icon" href="https://www.facebook.com/" target="_blank"><FaFacebook /></a>
+      <a className = "footer-icon"href = "https://telegram.org/" target="_blank"><FaTelegram /></a>
+      <a className = "footer-icon"href="https://whatsapp.com" target="_blank"><AiOutlineWhatsApp /></a>
+      <a className = "footer-icon"href = "https://instagram.com" target="_blank"><AiFillInstagram /></a>
       </div>)
     }
   }
