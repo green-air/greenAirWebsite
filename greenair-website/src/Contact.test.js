@@ -14,8 +14,13 @@ import Contact from "./pages/contact.js";
 
 
 //this could be tailored to input content on the contact us page
-test("renders contact test", () => {
+test("renders contactform test", () => {
   render(<Contact />);
-  const linkElement = screen.getByText(/Name/i);
-  expect(linkElement).toBeInTheDocument();
+  const nameLabel = screen.getByText(/name/i);
+  expect(nameLabel).toBeInTheDocument();
+  const emailLabel = screen.getByText(/email/i);
+  expect(emailLabel).toBeInTheDocument();
+  const msgLabel = screen.getByText(/message/i);
+  expect(msgLabel).toBeInTheDocument();
 });
+
