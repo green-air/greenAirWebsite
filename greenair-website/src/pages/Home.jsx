@@ -53,6 +53,7 @@ useEffect (()=>{
     return (
       //Background image//
      <div>
+      <h3>Home</h3>
      <div style={{ backgroundImage: `url(${background})`,
       height:'100vh',
       width:'100%',
