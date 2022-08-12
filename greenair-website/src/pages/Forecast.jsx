@@ -1,7 +1,7 @@
 import '../App.css';
-
+import background from"../images/2022-07-28 1.jpg";
 import Icons from '../Socials_component/Socials.jsx';
-
+import './Forecast.css'
 import React from 'react';
 
 
@@ -12,7 +12,7 @@ import ForecastPostcode from './ForecastPostcode.jsx'
 
 function Forecast() {
   return (
-    <div className="App">
+    <div style = {{height:"100vh"}} className="App">
       <ForecastLocationForm />
       <ForecastAPI />
       <ForecastPostcode />
