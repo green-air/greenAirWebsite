@@ -103,7 +103,7 @@ export default function Contact() {
         <input type="Send" value="Send" className="btn btn-primary"  style={{backgroundColor:''}} id='button'/>
       </div>
     </form>
-    <Icons />
+    <div><Icons /></div>
     </div>  
     
   );  
