@@ -2,6 +2,7 @@
 //npm install @testing-library/react jest
 
 // to run the tests, open your terminal and run npm run test command
+// then you might need to select 'a' 
 
 import React from "react";
 import { render, screen } from "@testing-library/react";
