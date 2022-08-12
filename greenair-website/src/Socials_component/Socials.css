@@ -1,0 +1,8 @@
+.socials {
+    color: aquamarine;
+    display: flex;
+    flex-flow: nowrap;
+    justify-content: space-evenly;
+    gap: 300px;
+    align-content: flex-end;
+}
