@@ -2,6 +2,7 @@ import React from 'react';
 import './Home.css';
 import background from"../images/Homepage.jpg";
 import { useEffect } from 'react';
+import Icons from "../Socials_component/Socials.jsx"
 
 //Weather Widget Code//
 const x = `<html> <script id='myScript'>
@@ -60,6 +61,7 @@ useEffect (()=>{
       backgroundSize: '100% 100%' }} > 
       <div style={{padding:'10px', position:'relative', left:'500px', top:'700px'}}><div style={{left:'700px'}} dangerouslySetInnerHTML={{__html:  x}}  ></div></div>
       </div> 
+      <Icons />
 </div>   
     );
 }
