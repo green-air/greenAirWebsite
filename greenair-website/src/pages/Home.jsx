@@ -46,7 +46,7 @@ const x = `<html> <script id='myScript'>
     <img
       alt="Powered by Tomorrow.io"
       src="https://weather-website-client.tomorrow.io/img/powered-by-tomorrow.svg"
-      width="140"
+      width="120"
       height="15"
     />
   </a>
@@ -71,7 +71,8 @@ function Home() {
         width: "100%",
         backgroundSize: "100% 100%",
       }}>
-        <h3>Home</h3>
+        {/* <h3>Home</h3> */}
+        <img alt="greenair logo" src={require('../images/logo(light).png')} height="120 px"/>
         <div
         
       >
@@ -84,11 +85,11 @@ function Home() {
             padding: "10px",
             position: "relative",
             left: "380px",
-            top: "80px",
+            top: "30px",
           }}
         >
           <div
-            style={{ left: "700px" }}
+            style={{ alignSelf : "auto" }}
             dangerouslySetInnerHTML={{ __html: x }}
           ></div>
         </div>

@@ -11,10 +11,13 @@
     height:'10vh';
     
 /* not sure what font should be */
-    font-family: "arial"
+    font-family: "arial";
+    font-size: 12 px;
+    
+    text-align: center;
+      }
 
-
-    }
+    
 
 #fcbutton {
 
