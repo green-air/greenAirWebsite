@@ -1,8 +1,15 @@
-import React from 'react';
+import React from "react";
 import './Home.css';
 import background from"../images/Homepage.jpg";
 import { useEffect } from 'react';
-import Icons from "../Socials_component/Socials.jsx"
+import "../App.css";
+import Socials from "../Socials_component/Socials.jsx";
+
+
+import ForecastLocationForm from "./ForecastPostcodeForm.jsx";
+// import ForecastForm from './ForecastForm.jsx';
+import ForecastAPI from "./ForecastAPI.jsx";
+import ForecastPostcode from "./ForecastPostcode.jsx";
 
 //Weather Widget Code//
 const x = `<html> <script id='myScript'>
@@ -43,28 +50,48 @@ const x = `<html> <script id='myScript'>
       height="15"
     />
   </a>
-</div></html>`
+</div></html>`;
 
 //Main Body of page//
 function Home() {
-useEffect (()=>{
-  const script = document.getElementById('myScript').innerHTML;
-  window.eval(script);
-}, [])
+  useEffect (() => {
+    const script = document.getElementById('myScript').innerHTML;
+    window.eval(script);
+  }, [])
     return (
       //Background image//
-     <div>
-      <h3>Home</h3>
-     <div style={{ backgroundImage: `url(${background})`,
-      height:'100vh',
-      width:'100%',
-      backgroundSize: '100% 100%' }} > 
-      <div style={{padding:'10px', position:'relative', left:'500px', top:'700px'}}><div style={{left:'700px'}} dangerouslySetInnerHTML={{__html:  x}}  ></div></div>
-      </div> 
-      <Icons />
-</div>   
-    );
+      <div>
+        <h3>Home</h3>
+        <div
+        style={{
+          backgroundImage: `url(${background})`,
+          height: "100vh",
+          width: "100%",
+          backgroundSize: "100% 100%",
+        }}
+      >
+        <div className="App">
+          <ForecastLocationForm />
+          <ForecastAPI />
+          <ForecastPostcode />
+          <Socials />
+        </div>
+        <div
+          style={{
+            padding: "10px",
+            position: "relative",
+            left: "500px",
+            top: "700px",
+          }}
+        >
+          <div
+            style={{ left: "700px" }}
+            dangerouslySetInnerHTML={{ __html: x }}
+          ></div>
+        </div>
+      </div>
+    </div>
+  );
 }
+
 export default Home;
-
-
