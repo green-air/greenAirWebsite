@@ -1,5 +1,3 @@
-import React, { useEffect } from "react";
-
 function ForecastAPI() {
   
   //   useEffect(() => {
@@ -32,8 +30,7 @@ function ForecastAPI() {
   const lon = 50;
   const apikey = "2bf08277-8b2c-4873-a808-0073964ad270";
 
-  const url =
-    `https://api.airvisual.com/v2/nearest_city?lat=${lat}&lon=${lon}&key=${apikey}`;
+  const url = `https://api.airvisual.com/v2/nearest_city?lat=${lat}&lon=${lon}&key=${apikey}`;
   getText(url);
   return (
     <div>

@@ -37,14 +37,13 @@
 
 
 // Navbar functional imports: -------------------------------------------------
-import ReactDOM from "react-dom";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "./Navigation/Layout.jsx";
 import Home from "./pages/Home.jsx";
 import Forecast from "./pages/Forecast.jsx";
 import About from "./pages/About.jsx";
 import NoPage from "./pages/NoPage.jsx";
-import Contact from "./pages/contact.js";
+import Contact from "./pages/Contact.js";
 // end navbar functional imports ----------------------------------------------
 
 // Navbar style imports: -------------------------------------------------
@@ -54,20 +53,20 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 export default function App() {
   return (
-  <div>
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route index element={<Home />} />
-          <Route path="/Forecast" element={<Forecast />} />
-          <Route path="/About" element={<About />} />
-          <Route path="/Home" element={<Home />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="*" element={<NoPage />} />
-        </Route>
-      </Routes>
-    </BrowserRouter>
-    </div>
+    <div>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Layout />}>
+            <Route index element={<Home />} />
+            <Route path="/Forecast" element={<Forecast />} />
+            <Route path="/About" element={<About />} />
+            <Route path="/Home" element={<Home />} />
+            <Route path="/Contact" element={<Contact />} />
+            <Route path="*" element={<NoPage />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
+      </div>
   );
 }
 
