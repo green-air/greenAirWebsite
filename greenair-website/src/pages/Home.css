@@ -6,3 +6,41 @@
     from {opacity: 0}
     to {opacity: 1}
     }
+
+    .bg {
+        background-image: url(../images/Homepage.jpg);
+        background-position: center;
+        min-height: "100vh";
+        width: "100%";
+        padding: 8rem;
+    
+    }
+
+      body, html {
+        margin:0;
+        padding:0;
+        overflow-x:hidden;
+      }
+
+      .App-logo{
+        width:400px;
+        height:400px;
+        position: relative;
+        left: 640px;
+        top: -150px;
+        margin-top: -50px;
+       
+        
+        /* top: 50%;
+        left: 50%;
+        margin-top: -500px;
+        margin-left: -190px; */
+
+        
+        
+    
+    }
+
+   .App{
+    margin-top: -200px;
+   }

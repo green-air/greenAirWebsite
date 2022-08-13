@@ -4,12 +4,12 @@ import background from"../images/Homepage.jpg";
 import { useEffect } from 'react';
 import "../App.css";
 import Socials from "../Socials_component/Socials.jsx";
-
-
 import ForecastLocationForm from "./ForecastPostcodeForm.jsx";
 // import ForecastForm from './ForecastForm.jsx';
 import ForecastAPI from "./ForecastAPI.jsx";
 import ForecastPostcode from "./ForecastPostcode.jsx";
+import logo from '../images/logo.png';
+
 
 //Weather Widget Code//
 const x = `<html> <script id='myScript'>
@@ -61,15 +61,10 @@ function Home() {
     return (
       //Background image//
       <div>
-        <h3>Home</h3>
+       
         <div
-        style={{
-          backgroundImage: `url(${background})`,
-          height: "100vh",
-          width: "100%",
-          backgroundSize: "100% 100%",
-        }}
-      >
+        class= "bg">
+           <img src={logo} className="App-logo" alt="logo"></img>
         <div className="App">
           <ForecastLocationForm />
           <ForecastAPI />
@@ -80,8 +75,8 @@ function Home() {
           style={{
             padding: "10px",
             position: "relative",
-            left: "500px",
-            top: "700px",
+            left: "400px",
+            top: "80px",
           }}
         >
           <div
