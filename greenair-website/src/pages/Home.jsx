@@ -52,10 +52,15 @@ const x = `<html> <script id='myScript'>
   </a>
 </div></html>`;
 
+// The following line was added to remove a warning which displays when running npm start
+/*eslint-disable no-eval */
+
 //Main Body of page//
 function Home() {
   useEffect (() => {
     const script = document.getElementById('myScript').innerHTML;
+     
+    
     window.eval(script);
   }, [])
     return (
