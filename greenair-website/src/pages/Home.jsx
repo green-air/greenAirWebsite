@@ -6,10 +6,11 @@ import "../App.css";
 import Socials from "../Socials_component/Socials.jsx";
 
 
-import ForecastLocationForm from "./ForecastPostcodeForm.jsx";
+// import ForecastLocationForm from "./ForecastPostcodeForm.jsx";
 // import ForecastForm from './ForecastForm.jsx';
-import ForecastAPI from "./ForecastAPI.jsx";
-import ForecastPostcode from "./ForecastPostcode.jsx";
+// import ForecastAPI from "./ForecastAPI.jsx";
+// import ForecastPostcode from "./ForecastPostcode.jsx";
+import APIPollutionWeather from "./APIPollutionWeather";
 
 //Weather Widget Code//
 const x = `<html> <script id='myScript'>
@@ -77,9 +78,7 @@ function Home() {
         
       >
         <div className="App">
-          <ForecastLocationForm />
-          <ForecastAPI />
-          <ForecastPostcode />
+        <APIPollutionWeather />
           <div
           style={{
             padding: "10px",
