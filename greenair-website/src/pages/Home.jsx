@@ -65,28 +65,26 @@ function Home() {
   }, [])
     return (
       //Background image//
-      <div>
+      <div style={{
+        backgroundImage: `url(${background})`,
+        height: "100vh",
+        width: "100%",
+        backgroundSize: "100% 100%",
+      }}>
         <h3>Home</h3>
         <div
-        style={{
-          backgroundImage: `url(${background})`,
-          height: "100vh",
-          width: "100%",
-          backgroundSize: "100% 100%",
-        }}
+        
       >
         <div className="App">
           <ForecastLocationForm />
           <ForecastAPI />
           <ForecastPostcode />
-          <Socials />
-        </div>
-        <div
+          <div
           style={{
             padding: "10px",
             position: "relative",
-            left: "500px",
-            top: "700px",
+            left: "380px",
+            top: "80px",
           }}
         >
           <div
@@ -94,6 +92,9 @@ function Home() {
             dangerouslySetInnerHTML={{ __html: x }}
           ></div>
         </div>
+          <Socials />
+        </div>
+        
       </div>
     </div>
   );
