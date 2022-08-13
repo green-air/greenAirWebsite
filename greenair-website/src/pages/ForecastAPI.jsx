@@ -1,8 +1,7 @@
-
 import { useState } from "react";
 
 //as a convention, functions are defined before the return
-function ForecastPostcodev2() {
+function ForecastAPI() {
   const [inputs, setInputs] = useState({});
 
   const handleChange = (event) => {
@@ -59,4 +58,4 @@ function ForecastPostcodev2() {
   );
 }
 
-export default ForecastPostcodev2;
+export default ForecastAPI;
