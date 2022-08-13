@@ -72,6 +72,7 @@ export default function Contact() {
           autoComplete="off"
           value={name}
           onChange={handleChange}
+          data-testid="name"
         />
       </div>
       <div className='form-group' style={{
@@ -85,6 +86,7 @@ export default function Contact() {
           autoComplete='off'
           value={email}
           onChange={handleChange}
+          data-testid="email"
         />
       </div>
       <div className='="form-group' style={{
@@ -97,6 +99,7 @@ export default function Contact() {
           className='form-control'
           value={message}
           onChange={handleChange}
+          data-testid="message"
         />
       </div>
       <div style={{textAlign:'center', padding:'45px'}}>
