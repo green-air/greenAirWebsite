@@ -1,6 +1,6 @@
 import * as React  from 'react';
 import "../App.js"
-import './contact.css'
+import './Contact.css'
 // import Button from 'react-bootstrap/Button';
 // import Card from 'react-bootstrap/Card';
 // import Form from 'react-bootstrap/Form';
