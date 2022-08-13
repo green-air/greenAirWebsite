@@ -1,0 +1,7 @@
+.gridContain{
+    display: grid;
+    row-gap: 50px;
+    grid-template-columns: auto auto ;
+    /* background-color: #2196F3; */
+    padding: 10px;
+}
