@@ -1,0 +1,59 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: monserrat, sans-serif;
+
+}
+input, button {
+appearance: none;
+background: rgb(176, 214, 195);
+border: solid round;
+outline: none;
+} 
+ .LoginForm{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(../images/login_background.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+image
+    {display: block;
+  margin-left: auto;
+  margin-right: auto;
+    }
+
+form .form-inner .form-group label{
+    display: block;
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    margin-bottom: 5px;
+    margin-left: 460px;
+    transition: 0.4s;
+}
+form .form-inner .form-group input{
+    display: block;
+    width: 30%;
+
+    padding: 15px;
+    margin-left: 460px;
+    background-color: rgb(176, 214, 195);
+    border-radius: 1px;
+}
+
+#submitbutton {display: block;
+margin-left: auto;
+margin-right: auto;
+color: black;
+border: 2px solid #555555;
+padding: 15px 30px;
+}
+
+#submitbutton:hover {
+    background-color: #555555;
+    color: white;
+  }

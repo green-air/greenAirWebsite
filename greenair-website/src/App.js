@@ -40,6 +40,7 @@ import Home from "./pages/Home.jsx";
 import About from "./pages/About.jsx";
 import NoPage from "./pages/NoPage.jsx";
 import Contact from "./pages/Contact.js";
+import Login from "./pages/Login.js";
 // end navbar functional imports ----------------------------------------------
 
 // Navbar style imports: -------------------------------------------------
@@ -57,7 +58,7 @@ export default function App() {
             <Route path="/About" element={<About />} />
             <Route path="/Home" element={<Home />} />
             <Route path="/Contact" element={<Contact />} />
-            <Route path="*" element={<NoPage />} />
+            <Route path="/Login" element={<Login />} />
           </Route>
         </Routes>
       </BrowserRouter>

@@ -1,9 +1,7 @@
 import Container from "react-bootstrap/Container";
-// import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import NavDropdown from "react-bootstrap/NavDropdown";
 import Offcanvas from "react-bootstrap/Offcanvas";
 
 import React from "react";
@@ -43,17 +41,8 @@ function MyNavBar() {
                   <Link className="flex-grow-1" to="/About">About</Link>
                  
                   <Link className="flex-grow-1" to="/Contact">Contact Us</Link>
-                  <NavDropdown
-                    title="Sign-in / Sign-up"
-                    id={`offcanvasNavbarDropdown-expand-${expand}`}
-                  >
-                    <NavDropdown.Item href="#action3">Sign-in</NavDropdown.Item>
-                    <NavDropdown.Item href="#action4">
-                    Sign-up
-                    </NavDropdown.Item>
-                    <NavDropdown.Divider />
-                    
-                  </NavDropdown>
+                  <Link className="flex-grow-1" to="/Login">Register</Link>
+                  
                 </Nav>
                 
                 <Form className="d-flex">
