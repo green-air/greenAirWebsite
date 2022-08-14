@@ -12,6 +12,7 @@ function ForecastAPI() {
 
   async function handleSubmit(event) {
     event.preventDefault();
+    console.log("submit button clicked")
 
 // postcode API call
     const url0 = `https://api.postcodes.io/postcodes/${inputs.postcode}`

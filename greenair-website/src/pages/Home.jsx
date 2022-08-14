@@ -1,8 +1,9 @@
 import React from "react";
-import './Home.css';
+// import './Home.css';
+// import "../App.css";
+
 // import background from"../images/Homepage.jpg";
 import { useEffect } from 'react';
-import "../App.css";
 import Socials from "../Socials_component/Socials.jsx";
 //import ForecastLocationForm from "./ForecastPostcodeForm.jsx";
 //import ForecastPostcode from "./ForecastPostcode.jsx";
@@ -68,7 +69,7 @@ function Home() {
 //Background image//
       <div>       
         <div
-        class= "bg">
+        className= "bg">
            <img src={logo} className="App-logo" alt="logo"></img>
         <div className="App">
 {/* Form input and DOM output will be rendered using this component: */}
@@ -79,14 +80,13 @@ function Home() {
             position: "relative",
             left: "380px",
             top: "30px",}}
-        
         ></div>
         <div
           style={{
             padding: "10px",
             position: "relative",
             left: "400px",
-            top: "80px",
+            top: "800px",
           }}
         >
           <div
