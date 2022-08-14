@@ -7,6 +7,34 @@
     to {opacity: 1}
     }
 
+
+    .bg {
+        background-image: url(../images/Homepage.jpg);
+        background-position: center;
+        min-height: "100vh";
+        width: "100%";
+        padding: 8rem;
+    
+    }
+
+      body, html {
+        margin:0;
+        padding:0;
+        overflow-x:hidden;
+      }
+
+      .App-logo{
+        width:400px;
+        height:400px;
+        position: relative;
+        left: 640px;
+        top: -150px;
+        margin-top: -50px;}
+
+   .App{
+    margin-top: -200px;
+   }
+
 .App {
     height:'10vh';
     
@@ -29,3 +57,4 @@
         background-color: #555555;
         color: white;
         } 
+
