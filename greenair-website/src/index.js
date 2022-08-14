@@ -34,20 +34,20 @@ import ReactDOM from "react-dom/client";
 //         <nav>
 //           <ul>
 //             <li>
-            
+
 //                 <Link to="/">Home</Link>
 //                 </li>
 //                 <li>
-              
+
 //                 <Link to="forecast">Forecast</Link>
 //               </li>
 //           </ul>
 //         </nav>
-           
+
 //       <Routes>
 //         <Route exact path="/" element={<App/>} />
 //         <Route exact path="/forecast" element={<Forecast/>} />
-        
+
 //       </Routes>
 //       </div>
 //     </Router>

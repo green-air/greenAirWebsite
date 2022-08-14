@@ -5,13 +5,16 @@
     font-family: monserrat, sans-serif;
 
 }
-input, button {
-appearance: none;
-background: rgb(176, 214, 195);
-border: solid round;
-outline: none;
-} 
- .LoginForm{
+
+input,
+button {
+    appearance: none;
+    background: rgb(176, 214, 195);
+    border: solid round;
+    outline: none;
+}
+
+.LoginForm {
     height: 100vh;
     display: flex;
     align-items: center;
@@ -21,13 +24,13 @@ outline: none;
     background-size: 100%;
 }
 
-image
-    {display: block;
-  margin-left: auto;
-  margin-right: auto;
-    }
+image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
 
-form .form-inner .form-group label{
+form .form-inner .form-group label {
     display: block;
     color: rgb(0, 0, 0);
     font-size: 20px;
@@ -35,7 +38,8 @@ form .form-inner .form-group label{
     margin-left: 460px;
     transition: 0.4s;
 }
-form .form-inner .form-group input{
+
+form .form-inner .form-group input {
     display: block;
     width: 30%;
 
@@ -45,15 +49,16 @@ form .form-inner .form-group input{
     border-radius: 1px;
 }
 
-#submitbutton {display: block;
-margin-left: auto;
-margin-right: auto;
-color: black;
-border: 2px solid #555555;
-padding: 15px 30px;
+#submitbutton {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    color: black;
+    border: 2px solid #555555;
+    padding: 15px 30px;
 }
 
 #submitbutton:hover {
     background-color: #555555;
     color: white;
-  }
+}

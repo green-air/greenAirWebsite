@@ -8,7 +8,7 @@ function ForecastLocationForm() {
   const handleChange = (event) => {
     const name = event.target.name;
     const value = event.target.value;
-    setInputs(values => ({...values, [name]: value}))
+    setInputs(values => ({ ...values, [name]: value }))
   }
 
   const handleSubmit = (event) => {
@@ -21,17 +21,17 @@ function ForecastLocationForm() {
     <div>
       <form onSubmit={handleSubmit}>
         <label>Postcode:
-        <input 
-            type="text" 
-            name="postcode" 
-            value={inputs.postcode || ""} 
+          <input
+            type="text"
+            name="postcode"
+            value={inputs.postcode || ""}
             onChange={handleChange}
           />
         </label>
         <input type="submit" value="Submit" id="fcbutton" />
-        </form>
-    <p>Postcode: {inputs.postcode}</p>
-  </div>
+      </form>
+      <p>Postcode: {inputs.postcode}</p>
+    </div>
   )
 
 }

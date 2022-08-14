@@ -1,6 +1,6 @@
 import React from 'react';
 import image from '../images/leaf pic.jpg'
-import '../pages/about.css'
+import '../pages/About.css'
 import '../Socials_component/Socials.css'
 import Icons from "../Socials_component/Socials.jsx"
 

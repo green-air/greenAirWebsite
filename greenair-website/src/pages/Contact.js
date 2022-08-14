@@ -1,4 +1,4 @@
-import * as React  from 'react';
+import * as React from 'react';
 import "../App.js"
 import './Contact.css'
 import { useState } from 'react';
@@ -8,28 +8,28 @@ import background from '../images/Contact.png'
 
 const Contact = () => {
   const [data, setData] = useState({
-    name:"",
-    email:"",
-    message:"",
+    name: "",
+    email: "",
+    message: "",
   });
 
-  const {name, email, message} = data
-  const handleChange = e=> {
-    setData({...data, [e.target.name]: e.target.value});
+  const { name, email, message } = data
+  const handleChange = e => {
+    setData({ ...data, [e.target.name]: e.target.value });
   };
-  const handleSubmit = async e=> {
+  const handleSubmit = async e => {
     e.preventDefault();
-    try{
+    try {
       const response = await fetch("https://v1.nocodeapi.com/habashi/google_sheets/RJGcUhyxeoSpDiHZ?tabId=Sheet1", {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
         },
-        body:JSON.stringify([[name, email, message, new Date().toLocaleDateString()]])
+        body: JSON.stringify([[name, email, message, new Date().toLocaleDateString()]])
       }
       );
       await response.json()
-      setData({...data, name:'', email:'', message:''})
+      setData({ ...data, name: '', email: '', message: '' })
     } catch (err) {
       console.log(err)
     }
@@ -38,73 +38,73 @@ const Contact = () => {
   return (
     <div style={{
       backgroundImage: `url(${background})`,
-      height:'100vh',
-      width:'100%',
+      height: '100vh',
+      width: '100%',
       backgroundSize: '100% 100%'
-      
+
     }}>
-    <form className="card shadow-lg mt-5 p-5 form" onSubmit={handleSubmit} style={{
-      width:'80vh',
-      position: 'relative',
-      left: '600px',
-      top:'100px',
-      height:'60vh',
-      backgroundImage:'linear-gradient(#3C4A3F, #9EAFA2, #8BC398)',
-      borderRadius:'90px 60px'   
-  }}>
-      <h3 className="TEXT-CENTRE MB-5" style={{
-        color:'white'
-      }}>Talk to us!</h3>
-      <div className="form-group" style={{
-        color:'white'
+      <form className="card shadow-lg mt-5 p-5 form" onSubmit={handleSubmit} style={{
+        width: '80vh',
+        position: 'relative',
+        left: '600px',
+        top: '100px',
+        height: '60vh',
+        backgroundImage: 'linear-gradient(#3C4A3F, #9EAFA2, #8BC398)',
+        borderRadius: '90px 60px'
       }}>
-        <label htmlFor='name'>Name</label>
-        <input 
-          type="text"
-          className="form-control"
-          name="name"
-          autoComplete="off"
-          value={name}
-          onChange={handleChange}
-          data-testid="name"
-        />
-      </div>
-      <div className='form-group' style={{
-        color:'white'
-      }}>
-        <label htmlFor='email'>Email</label>
-        <input
-          type="text"
-          className='form-control'
-          name="email"
-          autoComplete='off'
-          value={email}
-          onChange={handleChange}
-          data-testid="email"
-        />
-      </div>
-      <div className='="form-group' style={{
-        color:'white'
-      }}>
-        <label htmlFor='message'>Message</label>
-        <textarea
-          name="message"
-          rows="5"
-          className='form-control'
-          value={message}
-          onChange={handleChange}
-          data-testid="message"
-        />
-      </div>
-      <div style={{textAlign:'center', padding:'45px'}}>
-        <input type="submit" value="Submit" className="btn btn-primary"  style={{backgroundColor:''}} id='button'/>
-      </div>
-    </form>
-    
-    </div>  
-    
-  );  
+        <h3 className="TEXT-CENTRE MB-5" style={{
+          color: 'white'
+        }}>Talk to us!</h3>
+        <div className="form-group" style={{
+          color: 'white'
+        }}>
+          <label htmlFor='name'>Name</label>
+          <input
+            type="text"
+            className="form-control"
+            name="name"
+            autoComplete="off"
+            value={name}
+            onChange={handleChange}
+            data-testid="name"
+          />
+        </div>
+        <div className='form-group' style={{
+          color: 'white'
+        }}>
+          <label htmlFor='email'>Email</label>
+          <input
+            type="text"
+            className='form-control'
+            name="email"
+            autoComplete='off'
+            value={email}
+            onChange={handleChange}
+            data-testid="email"
+          />
+        </div>
+        <div className='="form-group' style={{
+          color: 'white'
+        }}>
+          <label htmlFor='message'>Message</label>
+          <textarea
+            name="message"
+            rows="5"
+            className='form-control'
+            value={message}
+            onChange={handleChange}
+            data-testid="message"
+          />
+        </div>
+        <div style={{ textAlign: 'center', padding: '45px' }}>
+          <input type="submit" value="Submit" className="btn btn-primary" style={{ backgroundColor: '' }} id='button' />
+        </div>
+      </form>
 
-  };
+    </div>
 
-  export default Contact;
+  );
+
+};
+
+export default Contact;

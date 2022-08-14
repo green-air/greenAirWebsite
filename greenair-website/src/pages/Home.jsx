@@ -2,18 +2,10 @@ import React from "react";
 import './Home.css';
 import "../App.css";
 
-// import background from"../images/Homepage.jpg";
 import { useEffect } from 'react';
 import Socials from "../Socials_component/Socials.jsx";
-//import ForecastLocationForm from "./ForecastPostcodeForm.jsx";
-//import ForecastPostcode from "./ForecastPostcode.jsx";
 import logo from '../images/logo.png';
-// import ForecastLocationForm from "./ForecastPostcodeForm.jsx";
-// import ForecastForm from './ForecastForm.jsx';
-// import ForecastAPI from "./ForecastAPI.jsx";
-// import ForecastPostcode from "./ForecastPostcode.jsx";
 import ForecastAPI from "./ForecastAPI";
-
 
 //Weather Widget Code//
 const x = `<html> <script id='weatherWidget'>
@@ -70,19 +62,19 @@ function Home() {
     <div>
       <div
         className="bg">
-        <img src={logo} className="App-logo" alt="logo"></img>  
+        <img src={logo} className="App-logo" alt="logo"></img>
         <div id='postcodeBox'><ForecastAPI /></div>
         <div className="App">
-        
-          
+
+
           <div
-          className="weatherWidget"
+            className="weatherWidget"
             style={{ left: "700px" }}
             dangerouslySetInnerHTML={{ __html: x }}
           >
           </div>
           {/* Form input and DOM output will be rendered using this component: */}
-          
+
         </div>
 
         <Socials />

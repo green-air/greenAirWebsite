@@ -26,8 +26,6 @@ export default function App() {
           </Route>
         </Routes>
       </BrowserRouter>
-      </div>
+    </div>
   );
 }
-
-//ReactDOM.render(<App />, document.getElementById("root"));

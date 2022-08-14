@@ -19,7 +19,7 @@ function Login() {
             console.log("logged in");
         else {
             console.log("details do not match")
-            ;
+                ;
         }
     }
     // this is proof of concept and is not yet fully functional
