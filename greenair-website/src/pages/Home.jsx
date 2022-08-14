@@ -59,21 +59,19 @@ const x = `<html> <script id='myScript'>
 /*eslint-disable no-eval */
 
 //Main Body of page//
-//Main Body of page//
 function Home() {
   useEffect (() => {
     const script = document.getElementById('myScript').innerHTML;
     window.eval(script);
   }, [])
     return (
-      //Background image//
-      <div>
-        
-       
+//Background image//
+      <div>       
         <div
         class= "bg">
            <img src={logo} className="App-logo" alt="logo"></img>
         <div className="App">
+{/* Form input and DOM output will be rendered using this component: */}
         <ForecastAPI />
           <div
           style={{
@@ -102,6 +100,6 @@ function Home() {
         
       </div>
     );
-  
-}
+  }
+
 export default Home;
