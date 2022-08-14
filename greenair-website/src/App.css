@@ -1,20 +1,17 @@
 .App {
   text-align: center;
-  overflow-x: hidden;
 }
 
-/* .App-logo {
+.App-logo {
   height: 40vmin;
   pointer-events: none;
-} */
+}
 
-
-/* @media (prefers-reduced-motion: no-preference) {
+@media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
 }
->>>>>>> 9a78944685be80fc0ef53e25e256779d4e424fb5
 
 .App-header {
   background-color: #282c34;
@@ -31,11 +28,11 @@
   color: #61dafb;
 }
 
-/* @keyframes App-logo-spin {
+@keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
   }
-} */
+}
