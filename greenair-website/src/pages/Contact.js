@@ -1,13 +1,6 @@
 import * as React  from 'react';
 import "../App.js"
 import './Contact.css'
-// import Button from 'react-bootstrap/Button';
-// import Card from 'react-bootstrap/Card';
-// import Form from 'react-bootstrap/Form';
-// import {
-//   Link, renderMatches, 
-// } from "react-router-dom";
-import Icons from "../Socials_component/Socials.jsx"
 import { useState } from 'react';
 import background from '../images/Contact.png'
 
