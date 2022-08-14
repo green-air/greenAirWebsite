@@ -1,9 +1,10 @@
 .bg {
   background-image: url(../images/Homepage.jpg);
   background-position: center;
-  min-height: "100vh";
+  height: 100vh;  
   width: "100%";
   padding: 8rem;
+  background-size: 100% 100%;
 }
 
 body, html {
@@ -13,17 +14,20 @@ body, html {
 }
 
 .App-logo {
-  width: 400px;
-  height: 400px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 300px;
+  height: 300px;
   position: relative;
-  left: 640px;
-  top: -150px;
-  margin-top: -50px;
+ 
+  top: -110px;
+  margin-top: -30px;
 }
 
-.App {
+#postcodeBox {
   height: '10vh';
-  margin-top: -200px;
+  margin-top: -110px;
   /* not sure what font should be */
   font-family: "arial";
   font-size: 12 px;
@@ -43,5 +47,11 @@ body, html {
 }
 
 .weatherWidget {
-/* please can someone make this widget behave itself? */
+  
+ position: relative;
+ margin-top:70px;
+ margin-left: -350px;
+  
+  
+  /* please can someone make this widget behave itself? */
 }

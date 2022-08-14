@@ -1,4 +1,6 @@
 import { useState } from "react";
+import Card from 'react-bootstrap/Card';
+import ListGroup from 'react-bootstrap/ListGroup';
 
 //as a convention, functions are defined before the return
 function ForecastAPI() {
@@ -34,12 +36,28 @@ function ForecastAPI() {
 
 //write object/data to the DOM
     let postcodeContainer = document.getElementById("postcodeDataOutput");
-    postcodeContainer.innerHTML = `<h3>here is postcode data:</h3> <p1>${postcodeLatitude}, ${postcodeLongitude} </p1>`;
+    postcodeContainer.innerHTML = `<h3>Postcode data:</h3> <p1> Latitude: ${postcodeLatitude}, Longitude: ${postcodeLongitude} </p1>`;
     let pollutionContainer = document.getElementById("pollutionDataOutput");
-    pollutionContainer.innerHTML = `<h3>here is pollution data:</h3> <p1>${pollution}</p1>`;
+    pollutionContainer.innerHTML = `<h3>Pollution data:</h3> <p1>${pollution}</p1>`;
     let weatherContainer = document.getElementById("weatherDataOutput");
-    weatherContainer.innerHTML = `<h3>here is weather data:</h3> <p1>${weather}</p1>`;
+    weatherContainer.innerHTML = `<h3>Weather data:</h3> <p1>${weather}</p1>`;
   }
+
+  const [{items}, setItems] = useState({ items: [] });
+  const addItem = () => {
+    items.push(  <div style={{padding:'10px' }}>
+      <Card style={{ width: '40rem', position:'relative', left:'470px'}}>
+      <Card.Header>Results</Card.Header>
+      <ListGroup variant="flush">
+        <ListGroup.Item> <section id="postcodeDataOutput"></section></ListGroup.Item>
+        <ListGroup.Item><section id="pollutionDataOutput"></section></ListGroup.Item>
+        <ListGroup.Item><section id="weatherDataOutput"></section></ListGroup.Item>
+      </ListGroup>
+    </Card>
+      </div>);
+    setItems({ items: [...items] });
+  };
+
   //this is the HTML that will be returned
   return (
     <div>
@@ -51,16 +69,18 @@ function ForecastAPI() {
             type="text"
             name="postcode"
             value={inputs.postcode || ""} //default text is nothing, if there is something added, it will write this text to 'inputs.latitude'
-            onChange={handleChange}   //if there is any text added in this input tag, execute the function named 'handleChange'
+            onChange={handleChange} 
+              //if there is any text added in this input tag, execute the function named 'handleChange'
           />
         </label><br></br>
-        <input id="fcbutton" type="submit" value="Submit" />
+        <input id="fcbutton" type="submit" value="Submit" onClick={addItem}/>
       </form>
 {/* Output section of the website */}
       <div>
-        <section id="postcodeDataOutput"></section>
+        {items}
+        {/* <section id="postcodeDataOutput"></section>
         <section id="pollutionDataOutput"></section>
-        <section id="weatherDataOutput"></section>
+        <section id="weatherDataOutput"></section> */}
       </div>
     </div>
   );
