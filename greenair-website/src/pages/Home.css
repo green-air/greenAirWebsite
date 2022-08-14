@@ -7,6 +7,7 @@
     to {opacity: 1}
     }
 
+
     .bg {
         background-image: url(../images/Homepage.jpg);
         background-position: center;
@@ -28,19 +29,32 @@
         position: relative;
         left: 640px;
         top: -150px;
-        margin-top: -50px;
-       
-        
-        /* top: 50%;
-        left: 50%;
-        margin-top: -500px;
-        margin-left: -190px; */
-
-        
-        
-    
-    }
+        margin-top: -50px;}
 
    .App{
     margin-top: -200px;
    }
+
+.App {
+    height:'10vh';
+    
+/* not sure what font should be */
+    font-family: "arial";
+    font-size: 12 px;
+    
+    text-align: center;
+      }
+
+    
+
+#fcbutton {
+
+    background-color: white;
+    color: black;
+    border: 2px solid #555555;}
+
+#fcbutton:hover {
+        background-color: #555555;
+        color: white;
+        } 
+

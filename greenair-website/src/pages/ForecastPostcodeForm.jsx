@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import './Home.css';
 
 //as a convention, functions are defined before the return
 function ForecastLocationForm() {
@@ -27,7 +28,7 @@ function ForecastLocationForm() {
             onChange={handleChange}
           />
         </label>
-        <input type="submit" value="Submit" />
+        <input type="submit" value="Submit" id="fcbutton" />
         </form>
     <p>Postcode: {inputs.postcode}</p>
   </div>

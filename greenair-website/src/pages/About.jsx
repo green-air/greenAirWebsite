@@ -1,8 +1,8 @@
 import React from 'react';
-import Icons from "../Socials_component/Socials.jsx"
 import image from '../images/leaf pic.jpg'
 import '../pages/about.css'
 import '../Socials_component/Socials.css'
+import Icons from "../Socials_component/Socials.jsx"
 // import Button from 'react-bootstrap/Button';
 // import Card from 'react-bootstrap/Card';
 // import Form from 'react-bootstrap/Form';

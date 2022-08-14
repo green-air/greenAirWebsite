@@ -5,10 +5,13 @@ import { useEffect } from 'react';
 import "../App.css";
 import Socials from "../Socials_component/Socials.jsx";
 import ForecastLocationForm from "./ForecastPostcodeForm.jsx";
-// import ForecastForm from './ForecastForm.jsx';
-import ForecastAPI from "./ForecastAPI.jsx";
 import ForecastPostcode from "./ForecastPostcode.jsx";
 import logo from '../images/logo.png';
+// import ForecastLocationForm from "./ForecastPostcodeForm.jsx";
+// import ForecastForm from './ForecastForm.jsx';
+// import ForecastAPI from "./ForecastAPI.jsx";
+// import ForecastPostcode from "./ForecastPostcode.jsx";
+import APIPollutionWeather from "./APIPollutionWeather";
 
 
 //Weather Widget Code//
@@ -46,11 +49,14 @@ const x = `<html> <script id='myScript'>
     <img
       alt="Powered by Tomorrow.io"
       src="https://weather-website-client.tomorrow.io/img/powered-by-tomorrow.svg"
-      width="140"
+      width="120"
       height="15"
     />
   </a>
 </div></html>`;
+
+// The following line was added to remove a warning which displays when running npm start
+/*eslint-disable no-eval */
 
 //Main Body of page//
 function Home() {
@@ -66,10 +72,6 @@ function Home() {
         class= "bg">
            <img src={logo} className="App-logo" alt="logo"></img>
         <div className="App">
-          <ForecastLocationForm />
-          <ForecastAPI />
-          <ForecastPostcode />
-          <Socials />
         </div>
         <div
           style={{
