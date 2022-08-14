@@ -12,7 +12,8 @@ import { useState } from 'react';
 import background from '../images/Contact.png'
 
 // Contact us Form //
-export default function Contact() {
+
+const Contact = () => {
   const [data, setData] = useState({
     name:"",
     email:"",
@@ -103,12 +104,14 @@ export default function Contact() {
         />
       </div>
       <div style={{textAlign:'center', padding:'45px'}}>
-        <input type="Send" value="Send" className="btn btn-primary"  style={{backgroundColor:''}} id='button'/>
+        <input type="submit" value="Submit" className="btn btn-primary"  style={{backgroundColor:''}} id='button'/>
       </div>
     </form>
-    <div><Icons /></div>
+    
     </div>  
     
   );  
 
   };
+
+  export default Contact;
