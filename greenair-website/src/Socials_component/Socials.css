@@ -2,21 +2,19 @@
    
     display: flex;
     flex-flow: nowrap;
-    justify-content: center;
+    justify-content: space-evenly;
     gap: 300px;
     font-size: 35px;
     position:fixed;
-    left: 320px;
+    left: 220px;
     bottom:20px;
-    flex-direction: row;
-    
     
 }
 
 .footer-icon{
     
     color: #3C4A3F;
-    justify-items: center; 
+    justify-items: center;
     
     
 

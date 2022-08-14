@@ -34,12 +34,12 @@ const x = `<html> <script id='weatherWidget'>
 </script>
 
 <div class="tomorrow"
-   data-location-id="122795,000032,064500,050388,049441,049747"
+   data-location-id="122795,000032,064500"
    data-language="EN"
    data-unit-system="METRIC"
    data-skin="dark"
    data-widget-type="current6"
-   style="padding-bottom:22px"
+   style="padding-bottom:22px;position:relative;"
 >
   <a
     href="https://www.tomorrow.io/weather/"
@@ -66,24 +66,21 @@ function Home() {
     window.eval(script);
   }, [])
   return (
-    
-    <div id='home_container'>
+    //Background image//
+    <div>
       <div
         className="bg">
         <img src={logo} className="App-logo" alt="logo"></img>
-        <div className="App" >
-        <ForecastAPI />
-        <div className="weatherWidget">
-          <div className="weatherWidget"
-          
+        <div className="App">
+          <div
+            style={{ left: "700px" }}
             dangerouslySetInnerHTML={{ __html: x }}
           >
           </div>
           {/* Form input and DOM output will be rendered using this component: */}
-          </div>
-          
+          <ForecastAPI />
         </div>
-        
+
         <Socials />
       </div>
 
