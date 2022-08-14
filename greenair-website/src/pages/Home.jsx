@@ -1,11 +1,11 @@
 import React from "react";
 import './Home.css';
-import background from"../images/Homepage.jpg";
+// import background from"../images/Homepage.jpg";
 import { useEffect } from 'react';
 import "../App.css";
 import Socials from "../Socials_component/Socials.jsx";
-import ForecastLocationForm from "./ForecastPostcodeForm.jsx";
-import ForecastPostcode from "./ForecastPostcode.jsx";
+//import ForecastLocationForm from "./ForecastPostcodeForm.jsx";
+//import ForecastPostcode from "./ForecastPostcode.jsx";
 import logo from '../images/logo.png';
 // import ForecastLocationForm from "./ForecastPostcodeForm.jsx";
 // import ForecastForm from './ForecastForm.jsx';
