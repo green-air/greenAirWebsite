@@ -11,9 +11,10 @@ function LoginForm ({Login, error}){
  
         <form onSubmit ={submitHandler}>
             <div className ="form-inner">
-                <p> Want regular airquality updates straight to your inbox? Sign up today!
-                    </p>
-                <h2>Login</h2>
+                <h1> 
+                    Like our page? Want regular air quality updates straight to your inbox? 
+                    </h1>
+                <h2>Sign Up Today!</h2>
 
                 <div className = "form-group">
                     <label hmtlFor="name">Name</label>
@@ -24,10 +25,10 @@ function LoginForm ({Login, error}){
                     <input type = "email" name = "email" id="email" onChange ={e=>setDetails({...details, email: e.target.value})} value={details.email}/>
                 </div>
                 <div className="form-group">
-                    <label htmlFor="postcode">postcode</label>
+                    <label htmlFor="postcode">Postcode</label>
                     <input type = "postcode" name = "postcode" id="postcode" onChange={e=>setDetails({...details, password: e.target.value})} value={details.password}/>
                 </div>
-                <input type = "submit" value= "Login"/>
+                <input type = "submit" value= "Sign up"/>
                 </div>
             
         </form>
