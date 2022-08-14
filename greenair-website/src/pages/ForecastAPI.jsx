@@ -12,6 +12,7 @@ function ForecastAPI() {
 
   async function handleSubmit(event) {
     event.preventDefault();
+    console.log("submit button clicked")
 
 // postcode API call
     const url0 = `https://api.postcodes.io/postcodes/${inputs.postcode}`
@@ -43,7 +44,7 @@ function ForecastAPI() {
   return (
     <div>
   {/* form input for postcode input  */}
-      <form onSubmit={handleSubmit}>
+      <form id="zvalue" onSubmit={handleSubmit}>
       <label>
           Postcode:
           <input

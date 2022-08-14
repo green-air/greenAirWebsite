@@ -1,8 +1,9 @@
 import React from "react";
 import './Home.css';
+import "../App.css";
+
 // import background from"../images/Homepage.jpg";
 import { useEffect } from 'react';
-import "../App.css";
 import Socials from "../Socials_component/Socials.jsx";
 //import ForecastLocationForm from "./ForecastPostcodeForm.jsx";
 //import ForecastPostcode from "./ForecastPostcode.jsx";
@@ -15,7 +16,7 @@ import ForecastAPI from "./ForecastAPI";
 
 
 //Weather Widget Code//
-const x = `<html> <script id='myScript'>
+const x = `<html> <script id='weatherWidget'>
 (function(d, s, id) {
     if (d.getElementById(id)) {
         if (window.__TOMORROW__) {
@@ -59,49 +60,32 @@ const x = `<html> <script id='myScript'>
 /*eslint-disable no-eval */
 
 //Main Body of page//
-//Main Body of page//
 function Home() {
-  useEffect (() => {
-    const script = document.getElementById('myScript').innerHTML;
+  useEffect(() => {
+    const script = document.getElementById('weatherWidget').innerHTML;
     window.eval(script);
   }, [])
-    return (
-      //Background image//
-      <div>
-        
-       
-        <div
-        class= "bg">
-           <img src={logo} className="App-logo" alt="logo"></img>
+  return (
+    //Background image//
+    <div>
+      <div
+        className="bg">
+        <img src={logo} className="App-logo" alt="logo"></img>
         <div className="App">
-        <ForecastAPI />
-          <div
-          style={{
-            padding: "10px",
-            position: "relative",
-            left: "380px",
-            top: "30px",}}
-        
-        ></div>
-        <div
-          style={{
-            padding: "10px",
-            position: "relative",
-            left: "400px",
-            top: "80px",
-          }}
-        >
           <div
             style={{ left: "700px" }}
             dangerouslySetInnerHTML={{ __html: x }}
-          ></div>
-         </div>
+          >
+          </div>
+          {/* Form input and DOM output will be rendered using this component: */}
+          <ForecastAPI />
         </div>
-          <Socials />
-        </div>
-        
+
+        <Socials />
       </div>
-    );
-  
+
+    </div>
+  );
 }
+
 export default Home;
