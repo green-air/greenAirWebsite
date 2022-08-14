@@ -73,25 +73,9 @@ function Home() {
         <img src={logo} className="App-logo" alt="logo"></img>
         <div className="App">
           <div
-            style={{
-              padding: "10px",
-              position: "relative",
-              left: "380px",
-              top: "30px",
-            }}
-          ></div>
-          <div
-            style={{
-              padding: "10px",
-              position: "relative",
-              left: "400px",
-              top: "800px",
-            }}
+            style={{ left: "700px" }}
+            dangerouslySetInnerHTML={{ __html: x }}
           >
-            <div
-              style={{ left: "700px" }}
-              dangerouslySetInnerHTML={{ __html: x }}
-            ></div>
           </div>
           {/* Form input and DOM output will be rendered using this component: */}
           <ForecastAPI />
