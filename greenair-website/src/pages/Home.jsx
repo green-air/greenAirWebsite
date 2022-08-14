@@ -67,7 +67,6 @@ function Home() {
   }, [])
   return (
     //Background image//
-    <div>
       <div
         className="bg">
         <img src={logo} className="App-logo" alt="logo"></img>
@@ -78,12 +77,11 @@ function Home() {
           >
           </div>
           {/* Form input and DOM output will be rendered using this component: */}
-          <ForecastAPI />
+          <div id="inputForm">
+            <ForecastAPI />
+          </div>
         </div>
-
         <Socials />
-      </div>
-
     </div>
   );
 }
