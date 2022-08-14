@@ -10,7 +10,7 @@ import Socials from "../Socials_component/Socials.jsx";
 // import ForecastForm from './ForecastForm.jsx';
 // import ForecastAPI from "./ForecastAPI.jsx";
 // import ForecastPostcode from "./ForecastPostcode.jsx";
-import APIPollutionWeather from "./APIPollutionWeather";
+import ForecastAPI from "./ForecastAPI";
 
 //Weather Widget Code//
 const x = `<html> <script id='myScript'>
@@ -78,7 +78,7 @@ function Home() {
         
       >
         <div className="App">
-        <APIPollutionWeather />
+        <ForecastAPI />
           <div
           style={{
             padding: "10px",
