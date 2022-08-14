@@ -33,21 +33,11 @@ form :after{
     z-index: 1;
     background-image: linear-gradient(to botton-right #FE4553, #18ca36);
 }
-/* form.form-inner{
-position: relative;
-display: block;
-background-color: rgb(48, 161, 38);
-padding: 30px;
-z-index: index 1;
-font: sans-serif;
-} */
-
- /* form.form-inner .form-group{
-    display: block;
-    color: aqua;
-    width: 300px;
-    margin-bottom: 50px;
-}  */
+image
+    {display: block;
+  margin-left: auto;
+  margin-right: auto;
+    }
 
 form .form-inner .form-group label{
     display: block;
