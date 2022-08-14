@@ -70,15 +70,19 @@ function Home() {
     <div>
       <div
         className="bg">
-        <img src={logo} className="App-logo" alt="logo"></img>
+        <img src={logo} className="App-logo" alt="logo"></img>  
+        <div id='postcodeBox'><ForecastAPI /></div>
         <div className="App">
+        
+          
           <div
+          className="weatherWidget"
             style={{ left: "700px" }}
             dangerouslySetInnerHTML={{ __html: x }}
           >
           </div>
           {/* Form input and DOM output will be rendered using this component: */}
-          <ForecastAPI />
+          
         </div>
 
         <Socials />
