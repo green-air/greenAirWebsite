@@ -53,7 +53,7 @@ function ForecastAPI() {
             onChange={handleChange}   //if there is any text added in this input tag, execute the function named 'handleChange'
           />
         </label><br></br>
-        <input type="submit" value="Submit" />
+        <input id="fcbutton" type="submit" value="Submit" />
       </form>
 {/* Output section of the website */}
       <div>
