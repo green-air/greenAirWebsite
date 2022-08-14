@@ -41,7 +41,7 @@ function MyNavBar() {
                 <Nav className="flex-grow-1 pe-3 topnav text">
                   <Link className="flex-grow-1" to="/">Home</Link>
                   <Link className="flex-grow-1" to="/About">About</Link>
-                  <Link className="flex-grow-1" to="/Forecast">Forecast</Link>
+                
                   <Link className="flex-grow-1" to="/Contact">Contact Us</Link>
                   <Link className ="flex-grow-1" to="/Login">Register</Link>
                   
