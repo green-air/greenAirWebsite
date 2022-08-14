@@ -4,10 +4,8 @@ import './index.css';
 import App from './App.js';
 import reportWebVitals from './reportWebVitals.js';
 
-
-import "./index.css";
-
-import ReactDOM from "react-dom";
+//since react v18 this is required instead of "from 'react-dom'"
+import ReactDOM from "react-dom/client";
 
 
 

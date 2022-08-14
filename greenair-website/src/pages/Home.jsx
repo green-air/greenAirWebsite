@@ -1,18 +1,22 @@
 import React from "react";
 import './Home.css';
-import background from"../images/Homepage.jpg";
-import { useEffect } from 'react';
 import "../App.css";
+
+// import background from"../images/Homepage.jpg";
+import { useEffect } from 'react';
 import Socials from "../Socials_component/Socials.jsx";
-
-
-import ForecastLocationForm from "./ForecastPostcodeForm.jsx";
+//import ForecastLocationForm from "./ForecastPostcodeForm.jsx";
+//import ForecastPostcode from "./ForecastPostcode.jsx";
+import logo from '../images/logo.png';
+// import ForecastLocationForm from "./ForecastPostcodeForm.jsx";
 // import ForecastForm from './ForecastForm.jsx';
-import ForecastAPI from "./ForecastAPI.jsx";
-import ForecastPostcode from "./ForecastPostcode.jsx";
+// import ForecastAPI from "./ForecastAPI.jsx";
+// import ForecastPostcode from "./ForecastPostcode.jsx";
+import ForecastAPI from "./ForecastAPI";
+
 
 //Weather Widget Code//
-const x = `<html> <script id='myScript'>
+const x = `<html> <script id='weatherWidget'>
 (function(d, s, id) {
     if (d.getElementById(id)) {
         if (window.__TOMORROW__) {
@@ -46,50 +50,44 @@ const x = `<html> <script id='myScript'>
     <img
       alt="Powered by Tomorrow.io"
       src="https://weather-website-client.tomorrow.io/img/powered-by-tomorrow.svg"
-      width="140"
+      width="120"
       height="15"
     />
   </a>
 </div></html>`;
 
+// The following line was added to remove a warning which displays when running npm start
+/*eslint-disable no-eval */
+
 //Main Body of page//
 function Home() {
-  useEffect (() => {
-    const script = document.getElementById('myScript').innerHTML;
+  useEffect(() => {
+    const script = document.getElementById('weatherWidget').innerHTML;
     window.eval(script);
   }, [])
-    return (
-      //Background image//
-      <div>
-        <h3>Home</h3>
-        <div
-        style={{
-          backgroundImage: `url(${background})`,
-          height: "100vh",
-          width: "100%",
-          backgroundSize: "100% 100%",
-        }}
-      >
+  return (
+    //Background image//
+    <div>
+      <div
+        className="bg">
+        <img src={logo} className="App-logo" alt="logo"></img>  
+        <div id='postcodeBox'><ForecastAPI /></div>
         <div className="App">
-          <ForecastLocationForm />
-          <ForecastAPI />
-          <ForecastPostcode />
-          <Socials />
-        </div>
-        <div
-          style={{
-            padding: "10px",
-            position: "relative",
-            left: "500px",
-            top: "700px",
-          }}
-        >
+        
+          
           <div
+          className="weatherWidget"
             style={{ left: "700px" }}
             dangerouslySetInnerHTML={{ __html: x }}
-          ></div>
+          >
+          </div>
+          {/* Form input and DOM output will be rendered using this component: */}
+          
         </div>
+
+        <Socials />
       </div>
+
     </div>
   );
 }

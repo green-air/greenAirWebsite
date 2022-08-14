@@ -1,9 +1,6 @@
 // import logo from './logo.svg';
 // import './App.css';
-
-
 // import { Icons } from './Socials_component/Socials.jsx';
-
 // import React from 'react';
 
 
@@ -40,7 +37,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "./Navigation/Layout.jsx";
 import Home from "./pages/Home.jsx";
-import Forecast from "./pages/Forecast.jsx";
 import About from "./pages/About.jsx";
 import NoPage from "./pages/NoPage.jsx";
 import Contact from "./pages/Contact.js";
@@ -59,7 +55,6 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route index element={<Home />} />
-            <Route path="/Forecast" element={<Forecast />} />
             <Route path="/About" element={<About />} />
             <Route path="/Home" element={<Home />} />
             <Route path="/Contact" element={<Contact />} />
