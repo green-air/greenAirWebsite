@@ -28,7 +28,7 @@ function Login () {
         setUser({name:"", email:""});
     }
     return (
-         <div className= "App">
+         <div className= "LoginForm">
              <LoginForm Login={Login} error ={error} 
              /> 
 <div className="socials">

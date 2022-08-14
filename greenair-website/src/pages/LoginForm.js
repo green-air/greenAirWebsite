@@ -28,7 +28,7 @@ function LoginForm ({Login, error}){
                     <label htmlFor="postcode">Postcode</label>
                     <input type = "postcode" name = "postcode" id="postcode" onChange={e=>setDetails({...details, password: e.target.value})} value={details.password}/>
                 </div>
-                <input type = "submit" value= "Sign up"/>
+                <input id="submitbutton" type = "submit" value= "Sign up"/>
                 </div>
             
         </form>

@@ -16,23 +16,11 @@ outline: none;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgb(82, 206, 158);
+    background-image: url(../images/login_background.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
 }
-form{
-    display: block;
-    position: relative;
-}
-form :after{
-    content:'';
-    display: block;
-    position: absolute;
-    top: -5px;
-    left: -5px;
-    right: -5px;
-    bottom: -5px;
-    z-index: 1;
-    background-image: linear-gradient(to botton-right #FE4553, #18ca36);
-}
+
 image
     {display: block;
   margin-left: auto;
@@ -44,6 +32,7 @@ form .form-inner .form-group label{
     color: rgb(0, 0, 0);
     font-size: 20px;
     margin-bottom: 5px;
+    margin-left: 460px;
     transition: 0.4s;
 }
 form .form-inner .form-group input{
@@ -51,7 +40,19 @@ form .form-inner .form-group input{
     width: 30%;
 
     padding: 15px;
-    margin-left: 500px;
+    margin-left: 460px;
     background-color: rgb(176, 214, 195);
     border-radius: 1px;
 }
+
+#submitbutton {display: block;
+margin-left: auto;
+margin-right: auto;
+color: black;
+border: 2px solid #555555;
+}
+
+#submitbutton:hover {
+    background-color: #555555;
+    color: white;
+  }
