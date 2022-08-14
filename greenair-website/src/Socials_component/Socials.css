@@ -5,10 +5,10 @@
     justify-content: center;
     gap: 300px;
     font-size: 35px;
-   
-    margin-bottom:40px;
+    position:fixed;
+    left: 320px;
+    bottom:20px;
     flex-direction: row;
-    justify-self: center;
     
     
 }
@@ -16,8 +16,7 @@
 .footer-icon{
     
     color: #3C4A3F;
-    justify-items: center;
-    justify-self: center; 
+    justify-items: center; 
     
     
 
