@@ -1,5 +1,5 @@
 import React, { useState, } from "react";
-
+import "../pages/login.css"
 import LoginForm from "./LoginForm.js"
 
 function Login () {
@@ -10,17 +10,23 @@ function Login () {
     const [user, setUser] = useState({name:'"', email:""});
     const [error, setError]= useState("");
 
+
+    
     const Login = details => {
         console.log(details);
+        if (details.email === adminUser.email &&adminUser.password)
+        console.log("logged in");
+        else {console.log("details do not match")
+    ;}
     }
     const Logout = () => {
-        console.log("Logout");
+        setUser({name:"", email:""});
     }
     return (
         <div className= "App">
-            {(user.email !="") ? (
+            {(user.email !=="") ? (
              <div className="welcome"><h2> Welcome,<span>{user.name}</span></h2>
-             <button>Logout</button>
+             <button onClick={Logout}>Logout</button>
         </div>
         ) : ( <LoginForm Login={Login} error ={error}/> 
         )}

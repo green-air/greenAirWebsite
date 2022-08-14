@@ -8,23 +8,28 @@ function LoginForm ({Login, error}){
     }
 
     return(
+ 
         <form onSubmit ={submitHandler}>
             <div className ="form-inner">
+                <p> Want regular airquality updates straight to your inbox? Sign up today!
+                    </p>
                 <h2>Login</h2>
-                {/* E ERROR!*/}
+
                 <div className = "form-group">
-                    <label hmtlFor="name">Name:</label>
+                    <label hmtlFor="name">Name</label>
                     <input type="text" name="name" id="name" onChange ={e=>setDetails({...details, name: e.target.value})}value={details.name}/>
                 </div>
-                <div className="form=group">
+                <div className="form-group">
                     <label htmlFor="email">Email</label>
                     <input type = "email" name = "email" id="email" onChange ={e=>setDetails({...details, email: e.target.value})} value={details.email}/>
                 </div>
-                <div className="form=group">
-                    <label htmlFor="password">Email</label>
-                    <input type = "password" name = "password" id="password" onChange={e=>setDetails({...details, password: e.target.value})} value={details.password}/>
+                <div className="form-group">
+                    <label htmlFor="postcode">postcode</label>
+                    <input type = "postcode" name = "postcode" id="postcode" onChange={e=>setDetails({...details, password: e.target.value})} value={details.password}/>
                 </div>
-            </div>
+                <input type = "submit" value= "Login"/>
+                </div>
+            
         </form>
     )
     }

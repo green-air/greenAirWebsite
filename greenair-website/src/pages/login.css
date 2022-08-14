@@ -1,0 +1,65 @@
+#{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: monserrat, sans-serif;
+
+}
+input, button {
+appearance: none;
+background: none;
+border: none;
+outline: none;
+}
+.Login{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(82, 206, 158);
+}
+form{
+    display: block;
+    position: relative;
+}
+form :after{
+    content:'';
+    display: block;
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    z-index: 1;
+    background-image: linear-gradient(to botton-right #FE4553, #18ca36);
+}
+form.form-inner{
+position: relative;
+display: block;
+background-color: rgb(48, 161, 38);
+padding: 30px;
+z-index:2;
+}
+
+form.form-inner .form-group{
+    display: block;
+    color: aqua;
+    width: 300px;
+    margin-bottom: 50px;
+}
+
+form .form-inner .form-group label{
+    display: block;
+    color: rgb(0, 0, 0);
+    font-size: 15px;
+    margin-bottom: 5px;
+    transition: 0.4s;
+}
+form .form-inner .form-group input{
+    display: block;
+    width: 30%;
+    position: center;
+    padding: 10px 15px;
+    background-color: rgb(176, 214, 195);
+    border-radius: 5px;
+}
