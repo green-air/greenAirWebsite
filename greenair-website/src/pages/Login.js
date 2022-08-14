@@ -1,6 +1,10 @@
 import React, { useState, } from "react";
 import "../pages/login.css"
 import LoginForm from "./LoginForm.js"
+import "../App.js"
+import Icons from "../Socials_component/Socials.jsx"
+import background from"../images/Homepage.jpg";
+import image from '../images/logo(light).png'
 
 function Login () {
     const adminUser = {
@@ -9,6 +13,7 @@ function Login () {
     }
     const [user, setUser] = useState({name:'"', email:""});
     const [error, setError]= useState("");
+
 
 
     
@@ -23,13 +28,19 @@ function Login () {
         setUser({name:"", email:""});
     }
     return (
-        <div className= "App">
-            {(user.email !=="") ? (
-             <div className="welcome"><h2> Welcome,<span>{user.name}</span></h2>
-             <button onClick={Logout}>Logout</button>
+         <div className= "App">
+           {/* {(user.email !=="") ? (
+        //      <div className="welcome"><h2> Welcome,<span>{user.name}</span></h2>
+        //      <button onClick={Logout}>Logout</button>
+        // </div>
+        // ) : ( */}
+             <LoginForm Login={Login} error ={error} 
+             /> 
+<div className="socials">
+        <Icons />
         </div>
-        ) : ( <LoginForm Login={Login} error ={error}/> 
-        )}
+        
         </div>)
-}
+        
+    }
 export default Login; 
