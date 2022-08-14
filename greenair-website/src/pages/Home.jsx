@@ -16,7 +16,7 @@ import ForecastAPI from "./ForecastAPI";
 
 
 //Weather Widget Code//
-const x = `<html> <script id='myScript'>
+const x = `<html> <script id='weatherWidget'>
 (function(d, s, id) {
     if (d.getElementById(id)) {
         if (window.__TOMORROW__) {
@@ -62,7 +62,7 @@ const x = `<html> <script id='myScript'>
 //Main Body of page//
 function Home() {
   useEffect(() => {
-    const script = document.getElementById('myScript').innerHTML;
+    const script = document.getElementById('weatherWidget').innerHTML;
     window.eval(script);
   }, [])
   return (
