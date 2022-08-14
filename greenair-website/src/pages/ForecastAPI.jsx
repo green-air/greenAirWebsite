@@ -44,7 +44,7 @@ function ForecastAPI() {
   return (
     <div>
   {/* form input for postcode input  */}
-      <form onSubmit={handleSubmit}>
+      <form id="zvalue" onSubmit={handleSubmit}>
       <label>
           Postcode:
           <input

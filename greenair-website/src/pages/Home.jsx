@@ -1,6 +1,6 @@
 import React from "react";
-// import './Home.css';
-// import "../App.css";
+import './Home.css';
+import "../App.css";
 
 // import background from"../images/Homepage.jpg";
 import { useEffect } from 'react';
@@ -61,45 +61,47 @@ const x = `<html> <script id='myScript'>
 
 //Main Body of page//
 function Home() {
-  useEffect (() => {
+  useEffect(() => {
     const script = document.getElementById('myScript').innerHTML;
     window.eval(script);
   }, [])
-    return (
-//Background image//
-      <div>       
-        <div
-        className= "bg">
-           <img src={logo} className="App-logo" alt="logo"></img>
+  return (
+    //Background image//
+    <div>
+      <div
+        className="bg">
+        <img src={logo} className="App-logo" alt="logo"></img>
         <div className="App">
-{/* Form input and DOM output will be rendered using this component: */}
-        <ForecastAPI />
           <div
-          style={{
-            padding: "10px",
-            position: "relative",
-            left: "380px",
-            top: "30px",}}
-        ></div>
-        <div
-          style={{
-            padding: "10px",
-            position: "relative",
-            left: "400px",
-            top: "800px",
-          }}
-        >
-          <div
-            style={{ left: "700px" }}
-            dangerouslySetInnerHTML={{ __html: x }}
+            style={{
+              padding: "10px",
+              position: "relative",
+              left: "380px",
+              top: "30px",
+            }}
           ></div>
-         </div>
+          <div
+            style={{
+              padding: "10px",
+              position: "relative",
+              left: "400px",
+              top: "800px",
+            }}
+          >
+            <div
+              style={{ left: "700px" }}
+              dangerouslySetInnerHTML={{ __html: x }}
+            ></div>
+          </div>
+          {/* Form input and DOM output will be rendered using this component: */}
+          <ForecastAPI />
         </div>
-          <Socials />
-        </div>
-        
+
+        <Socials />
       </div>
-    );
-  }
+
+    </div>
+  );
+}
 
 export default Home;
