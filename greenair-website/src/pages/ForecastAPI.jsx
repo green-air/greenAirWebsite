@@ -31,17 +31,31 @@ function ForecastAPI() {
     let myObject1 = await fetch(url1);
     let myText1 = await myObject1.json();
 //manipulate forecast API call returned data
-    let pollution = JSON.stringify(myText1.data.current.pollution);
-    let weather = JSON.stringify(myText1.data.current.weather);
+    let pollutionAqius = JSON.stringify(myText1.data.current.pollution.aqius);
+    let pollutionMainus = JSON.stringify(myText1.data.current.pollution.mainus).replace(/[^\w ]/g, '');
+
+    let weatherTemp = JSON.stringify(myText1.data.current.weather.tp);
+    let weatherAtmosP = JSON.stringify(myText1.data.current.weather.pr);
+    let weatherHumidity = JSON.stringify(myText1.data.current.weather.hu);
+    let weatherWindSpd = JSON.stringify(myText1.data.current.weather.ws);
+    let weatherWindDir = JSON.stringify(myText1.data.current.weather.wd);
 
 //write object/data to the DOM
-    let postcodeContainer = document.getElementById("postcodeDataOutput");
-    postcodeContainer.innerHTML = `<h3>Postcode data:</h3> <p1> Latitude: ${postcodeLatitude}, Longitude: ${postcodeLongitude} </p1>`;
+     
     let pollutionContainer = document.getElementById("pollutionDataOutput");
-    pollutionContainer.innerHTML = `<h3>Pollution data:</h3> <p1>${pollution}</p1>`;
+    pollutionContainer.innerHTML = `<p>Air Quality Index - AQI value based on US EPA standard: <p>${pollutionAqius}</p>
+                                    <p>Main pollutant for US AQI: ${pollutionMainus}</p>`;
+    
     let weatherContainer = document.getElementById("weatherDataOutput");
-    weatherContainer.innerHTML = `<h3>Weather data:</h3> <p1>${weather}</p1>`;
-  }
+    weatherContainer.innerHTML = `<p>atmospheric pressure: ${weatherTemp}°C</p>
+                                  <p>atmospheric pressure: ${weatherAtmosP} hPa</p>
+                                  <p>humidity: ${weatherHumidity}%</p>
+                                  <p>wind speed: ${weatherWindSpd} m/s</p>
+                                  <p>wind direction, as an angle of 360° (N=0, E=90, S=180, W=270): ${weatherWindDir}°</p>`;
+
+    let postcodeContainer = document.getElementById("postcodeDataOutput");
+    postcodeContainer.innerHTML = `<p>The GPS co-ordinates of your forecast are: ${postcodeLatitude}, ${postcodeLongitude}</p>`;
+   }
 
   const [{items}, setItems] = useState({ items: [] });
   const addItem = () => {
@@ -49,9 +63,9 @@ function ForecastAPI() {
       <Card style={{ width: '40rem', position:'relative', left:'470px'}}>
       <Card.Header>Results</Card.Header>
       <ListGroup variant="flush">
-        <ListGroup.Item> <section id="postcodeDataOutput"></section></ListGroup.Item>
         <ListGroup.Item><section id="pollutionDataOutput"></section></ListGroup.Item>
         <ListGroup.Item><section id="weatherDataOutput"></section></ListGroup.Item>
+        <ListGroup.Item> <section id="postcodeDataOutput"></section></ListGroup.Item>
       </ListGroup>
     </Card>
       </div>);
@@ -78,9 +92,6 @@ function ForecastAPI() {
 {/* Output section of the website */}
       <div>
         {items}
-        {/* <section id="postcodeDataOutput"></section>
-        <section id="pollutionDataOutput"></section>
-        <section id="weatherDataOutput"></section> */}
       </div>
     </div>
   );
