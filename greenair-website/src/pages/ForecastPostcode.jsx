@@ -1,5 +1,6 @@
 function ForecastPostcode() {
-    async function getText(url) {
+//postcode API
+  async function getText(url) {
       
       let data = await fetch(url);
       let object = await data.json();
@@ -11,10 +12,9 @@ function ForecastPostcode() {
       longitudeContainer.innerHTML = `<h3>here is the longitude:</h3> <p1>${text1}</p1>`;
     }
 
-    const postcode = "PA175DR";
+//    const postcode = "PA175DR";
   
-    const url =
-      `https://api.postcodes.io/postcodes/${postcode}`
+    const url = `https://api.postcodes.io/postcodes/${postcode}`
     getText(url);
     return (
       <div>
