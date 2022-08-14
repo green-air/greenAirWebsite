@@ -43,6 +43,7 @@ function MyNavBar() {
                   <Link className="flex-grow-1" to="/About">About</Link>
                   <Link className="flex-grow-1" to="/Forecast">Forecast</Link>
                   <Link className="flex-grow-1" to="/Contact">Contact Us</Link>
+                  <Link className ="flex-grow-1" to="/Login">Login/Register</Link>
                   <NavDropdown
                     title="Dropdown"
                     id={`offcanvasNavbarDropdown-expand-${expand}`}
