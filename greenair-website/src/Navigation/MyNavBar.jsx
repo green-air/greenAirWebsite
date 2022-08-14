@@ -41,31 +41,31 @@ function MyNavBar() {
                 <Nav className="flex-grow-1 pe-3 topnav text">
                   <Link className="flex-grow-1" to="/">Home</Link>
                   <Link className="flex-grow-1" to="/About">About</Link>
-                  <Link className="flex-grow-1" to="/Forecast">Forecast</Link>
+                 
                   <Link className="flex-grow-1" to="/Contact">Contact Us</Link>
                   <NavDropdown
-                    title="Dropdown"
+                    title="Sign-in / Sign-up"
                     id={`offcanvasNavbarDropdown-expand-${expand}`}
                   >
-                    <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
+                    <NavDropdown.Item href="#action3">Sign-in</NavDropdown.Item>
                     <NavDropdown.Item href="#action4">
-                      Another action
+                    Sign-up
                     </NavDropdown.Item>
                     <NavDropdown.Divider />
-                    <NavDropdown.Item href="#action5">
+                    {/* <NavDropdown.Item href="#action5">
                       Something else here
-                    </NavDropdown.Item>
+                    </NavDropdown.Item> */}
                   </NavDropdown>
                 </Nav>
                 
                 <Form className="d-flex">
-                  <Form.Control
+                  {/* <Form.Control
                     type="search"
                     placeholder="Search"
                     className="me-2"
                     aria-label="Search"
-                  />
-                  <Button variant="outline-success">Search</Button>
+                  /> */}
+                  {/* <Button variant="outline-success">Search</Button> */}
                 </Form>
                 
               </Offcanvas.Body>
