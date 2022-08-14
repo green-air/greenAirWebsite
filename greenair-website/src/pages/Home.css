@@ -1,30 +1,32 @@
-.bg {
+#home_container {
   background-image: url(../images/Homepage.jpg);
-  background-position: center;
-  min-height: "100vh";
-  width: "100%";
-  padding: 8rem;
+  min-height: 110vh;
+  overflow-x: hidden;
 }
+
+
 
 body, html {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
+
 }
 
 .App-logo {
-  width: 400px;
-  height: 400px;
-  position: relative;
-  left: 640px;
-  top: -150px;
-  margin-top: -50px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 250px;
+  object-position: center;
+  margin-top: 20px;
+  justify-self: center;
+  align-self: center;
+  
 }
 
 .App {
   height: '10vh';
-  margin-top: -200px;
-  /* not sure what font should be */
   font-family: "arial";
   font-size: 12 px;
   text-align: center;
@@ -43,5 +45,11 @@ body, html {
 }
 
 .weatherWidget {
-/* please can someone make this widget behave itself? */
+  width:100%;
+display:block;
+margin-top: 190px;
+  margin-left: auto;
+  margin-right: auto;
+
+
 }
