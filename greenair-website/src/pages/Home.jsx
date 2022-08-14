@@ -11,7 +11,7 @@ import logo from '../images/logo.png';
 // import ForecastForm from './ForecastForm.jsx';
 // import ForecastAPI from "./ForecastAPI.jsx";
 // import ForecastPostcode from "./ForecastPostcode.jsx";
-import APIPollutionWeather from "./APIPollutionWeather";
+import ForecastAPI from "./ForecastAPI";
 
 
 //Weather Widget Code//
@@ -59,6 +59,7 @@ const x = `<html> <script id='myScript'>
 /*eslint-disable no-eval */
 
 //Main Body of page//
+//Main Body of page//
 function Home() {
   useEffect (() => {
     const script = document.getElementById('myScript').innerHTML;
@@ -67,12 +68,21 @@ function Home() {
     return (
       //Background image//
       <div>
+        
        
         <div
         class= "bg">
            <img src={logo} className="App-logo" alt="logo"></img>
         <div className="App">
-        </div>
+        <ForecastAPI />
+          <div
+          style={{
+            padding: "10px",
+            position: "relative",
+            left: "380px",
+            top: "30px",}}
+        
+        ></div>
         <div
           style={{
             padding: "10px",
@@ -85,10 +95,13 @@ function Home() {
             style={{ left: "700px" }}
             dangerouslySetInnerHTML={{ __html: x }}
           ></div>
+         </div>
         </div>
+          <Socials />
+        </div>
+        
       </div>
-    </div>
-  );
+    );
+  
 }
-
 export default Home;
