@@ -1,0 +1,12 @@
+# Redirect with a 301
+/Home             /                        301
+/Register         /Login                   301
+
+# OK
+/Home                                      200
+/About                                     200
+/Contact                                   200
+/Login                                     200
+
+# Show a custom 404 for a path
+/*          /404.html                      404
