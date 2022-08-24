@@ -41,17 +41,16 @@ function ForecastAPI() {
     let weatherWindDir = JSON.stringify(myText1.data.current.weather.wd);
 
     //write object/data to the DOM
-
     let pollutionContainer = document.getElementById("pollutionDataOutput");
     pollutionContainer.innerHTML = `<p>Air Quality Index - AQI value based on US EPA standard: <p>${pollutionAqius}</p>
                                     <p>Main pollutant for US AQI: ${pollutionMainus}</p>`;
 
     let weatherContainer = document.getElementById("weatherDataOutput");
-    weatherContainer.innerHTML = `<p>atmospheric pressure: ${weatherTemp}°C</p>
-                                  <p>atmospheric pressure: ${weatherAtmosP} hPa</p>
-                                  <p>humidity: ${weatherHumidity}%</p>
-                                  <p>wind speed: ${weatherWindSpd} m/s</p>
-                                  <p>wind direction, as an angle of 360° (N=0, E=90, S=180, W=270): ${weatherWindDir}°</p>`;
+    weatherContainer.innerHTML = `<p>Temperature: ${weatherTemp}°C</p>
+                                  <p>Atmospheric pressure: ${weatherAtmosP} hPa</p>
+                                  <p>Humidity: ${weatherHumidity}%</p>
+                                  <p>Wind speed: ${weatherWindSpd} m/s</p>
+                                  <p>Wind direction, as an angle of 360° (N=0, E=90, S=180, W=270): ${weatherWindDir}°</p>`;
 
     let postcodeContainer = document.getElementById("postcodeDataOutput");
     postcodeContainer.innerHTML = `<p>The GPS co-ordinates of your forecast are: ${postcodeLatitude}, ${postcodeLongitude}</p>`;
