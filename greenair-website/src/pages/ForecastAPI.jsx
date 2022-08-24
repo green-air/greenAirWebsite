@@ -1,6 +1,5 @@
 import { useState } from "react";
-import Card from 'react-bootstrap/Card';
-import ListGroup from 'react-bootstrap/ListGroup';
+import './ForecastAPI.css'
 
 //as a convention, functions are defined before the return
 function ForecastAPI() {
@@ -40,9 +39,9 @@ function ForecastAPI() {
     let weatherWindSpd = JSON.stringify(myText1.data.current.weather.ws);
     let weatherWindDir = JSON.stringify(myText1.data.current.weather.wd);
 
-    //write object/data to the DOM
+    //write object/data to the DOM: explanation of the API data
     let pollutionContainer = document.getElementById("pollutionDataOutput");
-    pollutionContainer.innerHTML = `<p>Air Quality Index - AQI value based on US EPA standard: <p>${pollutionAqius}</p>
+    pollutionContainer.innerHTML = `<p>Air Quality Index - <br> AQI value based on US EPA standard: ${pollutionAqius}</p>
                                     <p>Main pollutant for US AQI: ${pollutionMainus}</p>`;
 
     let weatherContainer = document.getElementById("weatherDataOutput");
@@ -57,16 +56,15 @@ function ForecastAPI() {
   }
 
   const [{ items }, setItems] = useState({ items: [] });
+  
   const addItem = () => {
     items.push(<div style={{ padding: '10px' }}>
-      <Card style={{ width: '40rem', position: 'relative', left: '470px' }}>
-        <Card.Header>Results</Card.Header>
-        <ListGroup variant="flush">
-          <ListGroup.Item><section id="pollutionDataOutput"></section></ListGroup.Item>
-          <ListGroup.Item><section id="weatherDataOutput"></section></ListGroup.Item>
-          <ListGroup.Item> <section id="postcodeDataOutput"></section></ListGroup.Item>
-        </ListGroup>
-      </Card>
+{/* Output the forecastAPI data in a responsive white box: */}
+      <div className="white-box">
+        <section id="pollutionDataOutput"></section>
+        <section id="weatherDataOutput"></section>
+        <section id="postcodeDataOutput"></section>
+      </div>
     </div>);
     setItems({ items: [...items] });
   };
